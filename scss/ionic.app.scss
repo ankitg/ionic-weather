@@ -1,0 +1,91 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+/*
+** Custom loading stying
+*/
+
+.spinner svg {
+  width: 19% !important;
+  height: 85px !important;
+}
+
+.loading-container .loading {
+  background-color: rgba(0,0,0,0);
+}
+
+/*
+** Custom right align multi-line text styling
+*/
+
+.text-right {
+  text-align:right;
+}
+
+.forced-break {
+  display:block;
+}
+
+/*
+** Custom font colors
+*/
+
+.assertive {
+  color: #ef473a !important;
+}
+
+.positive {
+  color: #387ef5 !important;
+}
+
+.white {
+  color:#ffffff !important;
+}
+
+/*
+** Custom scroll Background
+*/
+.scroll-content{
+  background:url('../img/bg.jpg');
+}
+
+/*
+** Custom refresher styling
+*/
+$scroll-refresher-color: $royal;
+
+.scroll-refresher{
+.ionic-refresher-content {
+	color: $scroll-refresher-color;
+    .icon-refreshing {
+    	.spinner{
+        	svg {
+			    width: $spinner-width !important;
+			    height: $spinner-height !important;
+			}
+			stroke: $scroll-refresher-color;
+        	fill: $scroll-refresher-color;
+    	}
+     }
+   }
+}
