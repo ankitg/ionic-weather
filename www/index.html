@@ -45,7 +45,7 @@
       <ion-refresher on-refresh="refreshWeatherData()" spinner="dots">
       </ion-refresher>
       <ion-list show-reorder="data.showReorder">
-        <ion-item ng-repeat="city in cityList" class="item-thumbnail-left item-icon-right item-dark">
+        <ion-item collection-repeat="city in cityList" class="item-thumbnail-left item-icon-right item-dark">
           <img ng-src="http://openweathermap.org/img/w/{{ weather[city].icon }}.png" />
           <i class="icon text-right">
             <span class="forced-break"><p class="assertive">{{ weather[city].temp_max | number : 1 }}℃</p><span>
